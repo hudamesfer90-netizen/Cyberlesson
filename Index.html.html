@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>الأمن السيبراني – التقنية الرقمية</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2fafa;--card:#fff;--tx:#12343b;--mu:#5b7a80;--p:#028090;--p2:#05668D;--g:#02C39A;--pk:#d6336c;--bd:#d5ecec;--ok:#e3f9f0;--no:#fde8ee;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f2226;--card:#173137;--tx:#e8f6f6;--mu:#9bbcc0;--bd:#244a50;--ok:#12392f;--no:#40202c}}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Tajawal,system-ui,sans-serif;line-height:1.8}
+header{background:linear-gradient(135deg,var(--p2),var(--p) 60%,var(--g));color:#fff;padding:26px 18px 60px;text-align:center}
+header h1{margin:0;font-size:28px;font-weight:800}header p{margin:6px 0 0;opacity:.92}
+.shield{font-size:46px;display:inline-block;animation:fl 3s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-8px)}}
+nav{display:flex;gap:8px;justify-content:center;margin:-34px 12px 18px;flex-wrap:wrap}
+nav button{font:inherit;font-weight:700;border:0;background:var(--card);color:var(--p);padding:10px 20px;border-radius:30px;box-shadow:0 4px 14px #0002;cursor:pointer}
+nav button.on{background:var(--pk);color:#fff}
+main{max-width:860px;margin:auto;padding:0 14px 40px}
+section{display:none;animation:in .4s}section.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(12px)}}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:18px;margin-bottom:16px;box-shadow:0 3px 12px #0001}
+h2{margin:0 0 10px;color:var(--p);font-size:21px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.chip{border:2px solid var(--bd);background:var(--bg);border-radius:14px;padding:8px 4px;text-align:center;font:inherit;font-weight:700;color:var(--tx);cursor:pointer;transition:.2s}
+.chip small{display:block;color:var(--mu);font-weight:400;font-size:11px}
+.chip.on{background:var(--p);color:#fff;border-color:var(--p);transform:scale(1.05)}.chip.on small{color:#e0ffff}
+.det{margin-top:12px;background:var(--ok);border-radius:14px;padding:12px;min-height:60px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.box{border-radius:16px;padding:12px;background:var(--bg);border:1px solid var(--bd)}
+.box b{color:var(--pk)}
+.tag{display:inline-block;background:var(--p);color:#fff;border-radius:20px;padding:0 12px;font-size:13px;margin-bottom:4px}
+.tg{display:flex;gap:6px;margin-bottom:10px}.tg button{flex:1}
+table{width:100%;border-collapse:collapse;font-size:14px}th{background:var(--pk);color:#fff;padding:6px}td{padding:6px;border:1px solid var(--bd);vertical-align:top}td:first-child{font-weight:700;color:var(--pk);width:20%}
+.acc{border:1px solid var(--bd);border-radius:14px;margin-bottom:8px;overflow:hidden}
+.acc button{width:100%;font:inherit;font-weight:700;text-align:right;background:var(--bg);color:var(--tx);border:0;padding:10px 14px;cursor:pointer}
+.acc div{display:none;padding:10px 14px}.acc.on div{display:block}
+.btn{font:inherit;font-weight:800;border:0;background:var(--pk);color:#fff;padding:11px 26px;border-radius:30px;cursor:pointer}
+input,textarea{font:inherit;width:100%;padding:11px;border:2px solid var(--bd);border-radius:14px;background:var(--card);color:var(--tx)}
+.opt{display:block;width:100%;text-align:right;font:inherit;border:2px solid var(--bd);background:var(--card);color:var(--tx);padding:10px 14px;border-radius:14px;margin:8px 0;cursor:pointer}
+.opt.ok{background:var(--ok);border-color:var(--g)}.opt.no{background:var(--no);border-color:var(--pk)}
+.fb{margin-top:10px;padding:12px;border-radius:14px;background:var(--no);display:none}.fb.ok{background:var(--ok)}
+.bar{height:10px;background:var(--bd);border-radius:10px;overflow:hidden;margin-bottom:12px}.bar i{display:block;height:100%;background:var(--g);transition:.4s;width:0}
+.lb div{display:flex;justify-content:space-between;padding:8px 12px;border-radius:12px;background:var(--bg);margin-bottom:6px}
+.big{font-size:44px;font-weight:800;color:var(--p);text-align:center}
+.em{display:flex;gap:8px;justify-content:center;margin:10px 0}.em button{font-size:32px;border:2px solid var(--bd);background:var(--card);border-radius:50%;width:56px;height:56px;cursor:pointer}.em button.on{border-color:var(--pk);transform:scale(1.15)}
+@media(max-width:520px){.two{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}}
+</style></head><body>
+<header><div class="shield">🛡️</div><h1>الأمن السيبراني</h1><p>التقنية الرقمية • الدرس الثالث</p></header>
+<nav><button class="on" data-t="a">📖 الشرح</button><button data-t="b">🏆 المسابقة</button><button data-t="c">🎟️ بطاقة الخروج</button></nav>
+<main>
+<section id="a" class="on">
+<div class="card"><h2>🔄 الأمن السيبراني في دورة حياة النظام</h2><p>ندمج الأمن في كل مرحلة لنبني نظامًا آمنًا ومحميًا من التهديدات. اضغط على كل مرحلة:</p>
+<div class="steps" id="st"></div><div class="det" id="sd">👆 اختر مرحلة</div></div>
+
+<div class="card"><h2>🇸🇦 الأمن السيبراني في المملكة</h2>
+<div class="two"><div class="box"><span class="tag">إنجاز</span><br>المركز الأول عالميًا في المؤشر العالمي للأمن السيبراني (GCI) ضمن الكتاب السنوي للتنافسية 2026، وصُنفت في الفئة الأولى «النموذج المحتذى به» لدى الاتحاد الدولي للاتصالات.</div>
+<div class="box"><span class="tag">الهيئة الوطنية NCA</span><br>الجهة المختصة والمرجع الوطني للأمن السيبراني: حماية الشبكات والأنظمة والبيانات من الاختراق أو التعطيل أو الاستغلال غير المشروع.</div></div>
+<p style="margin-bottom:6px"><b>مبادرات المملكة (اضغط):</b></p><div id="ini"></div></div>
+
+<div class="card"><h2>👣 البصمة الرقمية</h2><p>الأثر الذي تتركه عند تصفحك أو عملك عبر الإنترنت، ويراه الآخرون ويمكن استخدامه في الإعلانات.</p>
+<div class="tg"><button class="chip on" data-f="0">✍️ نشطة</button><button class="chip" data-f="1">🕵️ غير نشطة</button></div>
+<div class="det" id="fd"></div>
+<p><b>تأثيرها على النظام:</b> أخطار أمنية • السمعة • التوافق مع قوانين الخصوصية • المراقبة المستمرة.</p></div>
+
+<div class="card"><h2>🧱 جدار الحماية vs مكافحة الفيروسات</h2>
+<table><tr><th></th><th>جدار الحماية</th><th>مكافحة الفيروسات</th></tr>
+<tr><td>الوظيفة</td><td>يراقب حركة مرور الشبكة حسب قواعد الأمان</td><td>يكتشف ويزيل البرامج الضارة</td></tr>
+<tr><td>الهدف</td><td>يمنع الوصول غير المصرح به</td><td>يحمي من الفيروسات والديدان</td></tr>
+<tr><td>النوع</td><td>أجهزة أو برمجيات</td><td>برمجيات دائمًا</td></tr>
+<tr><td>المسح</td><td>لا يفحص الملفات</td><td>يفحص الملفات والبرامج</td></tr></table>
+<p>💡 في ويندوز: <b>Windows Defender Firewall</b> و<b>Microsoft Defender</b>. لا تُشغّل أكثر من برنامج مكافحة فيروسات معًا لتجنب التعارض.</p>
+<p>⚠️ جدار الحماية وحده لا يحمي من: الاحتيال الإلكتروني، الإعلانات المنبثقة، البريد المزعج.</p></div>
+
+<div class="card"><h2>👤 حسابات المستخدمين في ويندوز</h2><div id="acc"></div></div>
+<div style="text-align:center"><button class="btn" onclick="go('b')">جاهز للمسابقة؟ 🚀</button></div>
+</section>
+
+<section id="b">
+<div class="card" id="q0"><h2>🏆 مسابقة الأمن السيبراني</h2><p>اكتب اسمك وابدأ، ولكل إجابة صحيحة 10 نقاط!</p><input id="nm" maxlength="30" placeholder="اسم الطالب/ـة"><p></p><button class="btn" id="go">ابدأ ▶</button></div>
+<div class="card" id="q1" style="display:none"><div class="bar"><i id="pb"></i></div><div id="qn" style="color:var(--mu)"></div><h2 id="qt"></h2><div id="qo"></div><div class="fb" id="fb"></div><p style="text-align:center"><button class="btn" id="nx" style="display:none">التالي ◀</button></p></div>
+<div class="card" id="q2" style="display:none;text-align:center"><div class="big" id="sc"></div><p id="ms"></p><button class="btn" onclick="go('c')">إلى بطاقة الخروج 🎟️</button></div>
+<div class="card"><h2>🥇 لوحة المتصدرين</h2><div class="lb" id="lb">لا توجد نتائج بعد</div></div>
+</section>
+
+<section id="c">
+<div class="card"><h2>🎟️ بطاقة الخروج</h2>
+<p><b>1.</b> كيف تقيّم فهمك للدرس؟</p><div class="em" id="em"></div>
+<p><b>2.</b> اكتب أهم معلومة تعلمتها اليوم:</p><textarea id="e1" rows="2"></textarea>
+<p><b>3.</b> اذكر سلوكًا ستغيّره لحماية بصمتك الرقمية:</p><textarea id="e2" rows="2"></textarea>
+<p><b>4.</b> سؤال ما زال لديك (اختياري):</p><textarea id="e3" rows="2"></textarea>
+<p style="text-align:center"><button class="btn" id="es">إرسال ✅</button></p><div id="ed" class="det" style="display:none">🌟 شكرًا لك! أحسنت، كن دائمًا مواطنًا رقميًا واعيًا.</div></div>
+<div class="card"><h2>📌 الخلاصة</h2><p>الأمن جزء من كل مرحلة في بناء النظام • جدار الحماية يراقب الشبكة ومكافح الفيروسات يفحص الملفات • بصمتك الرقمية تبقى فاحذر ما تنشره • المملكة رائدة عالميًا في الأمن السيبراني 🇸🇦</p></div>
+</section>
+</main>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+function go(t){$$('section').forEach(s=>s.classList.toggle('on',s.id===t));$$('nav button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));scrollTo({top:0,behavior:'smooth'})}
+$$('nav button').forEach(b=>b.onclick=()=>go(b.dataset.t));
+const ST=[["التحليل","Analysis","📋","عند جمع المتطلبات نحدد ونوثّق متطلبات الأمن السيبراني، ليُبنى النظام بأقصى درجات الأمان."],["التصميم","Design","✏️","ندمج الأمن مع التصميم وننفذ ضوابط الأمن، ليكون النظام مرنًا في مواجهة الهجمات."],["التطوير","Development","💻","نتبع نظام التشفير الآمن، ونستخدم معايير التشفير الآمنة، ونراجع التعليمات البرمجية لإصلاح الثغرات."],["الاختبارات","Testing","🧪","نجري اختبار الأمن السيبراني: اختبار الاختراق ومسح الثغرات الأمنية لاكتشاف أي ثغرة مفقودة."],["التنفيذ","Implementation","🚀","ننفذ الضوابط الأمنية للتأكد أن النظام آمن عند نشره."],["الصيانة","Maintenance","🔧","ندمج الأمن مع الصيانة المستمرة: تقييمات أمنية منتظمة وتحديث ضوابط الأمان عند الحاجة."]];
+$('#st').innerHTML=ST.map((s,i)=>`<button class="chip" data-i="${i}">${s[2]} ${s[0]}<small>${s[1]}</small></button>`).join('');
+$$('#st .chip').forEach(c=>c.onclick=()=>{$$('#st .chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');const s=ST[c.dataset.i];$('#sd').innerHTML=`<b>${s[0]}:</b> ${s[3]}`});
+function acc(el,items){el.innerHTML=items.map(i=>`<div class="acc"><button>${i[0]}</button><div>${i[1]}</div></div>`).join('');$$('#'+el.id+' .acc button').forEach(b=>b.onclick=()=>b.parentNode.classList.toggle('on'))}
+acc($('#ini'),[["🎓 التعليم والتدريب","برامج جامعية متخصصة ومبادرات تدريبية مثل الأكاديمية الوطنية ومعسكرات SAFCSP، وإطار سايبر-التعليم."],["🗺️ الاستراتيجية الوطنية","رؤية وأهداف المملكة، وتطوير القدرات الوطنية وحماية البنية التحتية الحيوية وتعزيز التعاون الدولي."],["🤝 الشراكات الصناعية","التعاون مع القطاع الخاص وشركات دولية لتوفير التدريب والتطوير."],["📈 تطوير القطاع","مبادرات مثل التمارين الوطنية السيبرانية، وبرنامج سايبرIC."]]);
+acc($('#acc'),[["حساب المسؤول المدمج","يمنح امتيازات مهمة: تثبيت البرامج، تشغيل الأجهزة، تغيير الإعدادات وتثبيت تحديثات النظام."],["حساب المستخدم بامتيازات إدارية","حساب عادي مُنح صلاحيات إدارية."],["حساب مايكروسوفت","يربط إعداداتك وملفاتك وسجل التصفح بحسابك على الإنترنت."],["الحساب المحلي","حساب خاص بجهاز واحد دون الحاجة لحساب إنترنت."]]);
+const FP=[["أمثلة: المنشورات في فيسبوك أو إنستجرام أو تويتر • النماذج التي تعبئها عبر الإنترنت مثل الاشتراك في رسائل البريد.","تنشأ من بيانات تتركها <b>بإرادتك</b>."],["أمثلة: التطبيقات التي تحدد موقعك الجغرافي • المواقع التي تثبّت ملفات تعريف الارتباط • الإعلانات المخصصة بناءً على اهتماماتك.","تتركها <b>دون قصد</b> وأحيانًا دون أن تعرف."]];
+function fp(i){$('#fd').innerHTML=FP[i][1]+'<br>'+FP[i][0]}fp(0);
+$$('.tg .chip').forEach(c=>c.onclick=()=>{$$('.tg .chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');fp(+c.dataset.f)});
+
+const Q=[
+["في أي مرحلة تُجرى اختبارات الاختراق ومسح الثغرات؟",["التحليل","الاختبارات","الصيانة"],1,"اختبار الاختراق ومسح الثغرات يتمان في مرحلة <b>الاختبارات</b> لاكتشاف أي ثغرة مفقودة."],
+["متى نحدد ونوثّق متطلبات الأمن السيبراني؟",["مرحلة التحليل","مرحلة التنفيذ","بعد نشر النظام"],0,"نبدأ مبكرًا: في مرحلة <b>التحليل</b> عند جمع المتطلبات."],
+["أي مما يلي يُعد بصمة رقمية نشطة؟",["موقعك الجغرافي من تطبيق","منشور كتبته في إنستجرام","ملف تعريف الارتباط"],1,"البصمة <b>النشطة</b> تتركها بإرادتك مثل المنشورات. الموقع وملفات الارتباط بصمات غير نشطة."],
+["ما وظيفة جدار الحماية؟",["إزالة الفيروسات من الملفات","مراقبة حركة مرور الشبكة حسب قواعد الأمان","تحديث النظام"],1,"الجدار يراقب ويتحكم في حركة الشبكة، أما إزالة الفيروسات فمن عمل مكافح الفيروسات."],
+["أي المحميات التالية لا يحمي منها جدار الحماية وحده؟",["الاحتيال الإلكتروني","الوصول غير المصرح به إلى الشبكة","اتصال المتسللين بجهازك"],0,"الجدار لا يحمي من الاحتيال الإلكتروني والإعلانات المنبثقة والبريد المزعج، فتحتاج وعيك أيضًا."],
+["أي الحسابات يرتبط بإعداداتك وملفاتك عبر الإنترنت؟",["الحساب المحلي","حساب مايكروسوفت","حساب المسؤول المدمج"],1,"حساب <b>مايكروسوفت</b> يربط بياناتك بحسابك على الإنترنت، والمحلي خاص بجهاز واحد."],
+["أي جهة هي المرجع الوطني للأمن السيبراني في المملكة؟",["الهيئة الوطنية للأمن السيبراني NCA","الاتحاد الدولي للاتصالات ITU","المعهد الدولي IMD"],0,"<b>NCA</b> هي الجهة المختصة والمرجع الوطني. أما ITU وIMD فجهات دولية أصدرت التصنيفات."],
+["لماذا لا نشغّل أكثر من برنامج مكافحة فيروسات معًا؟",["لأنه يبطئ الإنترنت فقط","لتجنب التعارض بين البرامج","لأنه غير قانوني"],1,"قد يحدث <b>تعارض</b> بين برامج الأمان وتتعطل بعض الوظائف."]];
+let i=0,sc=0,name='',db=null,docs=[];
+$('#go').onclick=()=>{name=$('#nm').value.trim();if(!name){$('#nm').focus();return}$('#q0').style.display='none';$('#q1').style.display='block';show()};
+function show(){const q=Q[i];$('#pb').style.width=(i/Q.length*100)+'%';$('#qn').textContent=`سؤال ${i+1} من ${Q.length} • النقاط: ${sc}`;$('#qt').textContent=q[0];$('#fb').style.display='none';$('#nx').style.display='none';
+$('#qo').innerHTML=q[1].map((o,k)=>`<button class="opt" data-k="${k}">${o}</button>`).join('');
+$$('.opt').forEach(b=>b.onclick=()=>pick(+b.dataset.k))}
+function pick(k){const q=Q[i],ok=k===q[2];$$('.opt').forEach((b,j)=>{b.disabled=true;if(j===q[2])b.classList.add('ok');else if(j===k)b.classList.add('no')});
+if(ok)sc+=10;const f=$('#fb');f.className='fb'+(ok?' ok':'');f.style.display='block';f.innerHTML=(ok?'🎉 <b>أحسنت!</b> ':'💡 <b>لا بأس، تعلّم معنا:</b> ')+q[3];$('#nx').style.display='inline-block';$('#nx').textContent=i==Q.length-1?'النتيجة 🏁':'التالي ◀'}
+$('#nx').onclick=()=>{i++;if(i<Q.length)show();else fin()};
+function fin(){$('#q1').style.display='none';$('#q2').style.display='block';$('#sc').textContent=sc+' / '+Q.length*10;const p=sc/(Q.length*10);$('#ms').textContent=p>=.8?'🌟 ممتاز يا '+name+'! أنت بطل الأمن السيبراني':p>=.5?'👏 جيد يا '+name+'، راجع الأسئلة التي أخطأت فيها':'💪 حاول مرة أخرى بعد مراجعة الشرح يا '+name;
+save('scores',{name,score:sc,t:Date.now()})}
+function ls(k){try{return JSON.parse(localStorage.getItem(k)||'[]')}catch(e){return[]}}
+async function save(c,d){if(db){try{await db.collection(c).add(d);return}catch(e){}}try{const a=ls(c);a.push(d);localStorage.setItem(c,JSON.stringify(a))}catch(e){}if(c=='scores')draw(ls('scores'))}
+function draw(a){a=[...a].sort((x,y)=>y.score-x.score||x.t-y.t).slice(0,20);const m=['🥇','🥈','🥉'];$('#lb').innerHTML=a.length?a.map((r,k)=>`<div><span>${m[k]||k+1+'.'} <span class="n"></span></span><b>${r.score}</b></div>`).join(''):'لا توجد نتائج بعد';$$('#lb .n').forEach((e,k)=>e.textContent=a[k].name)}
+draw(ls('scores'));
+(async()=>{try{db=await claude.use('db');if(db){db.collection('scores').orderBy('score','desc').limit(30).onSnapshot(s=>{docs=s.docs.map(d=>d.data());draw(docs)},()=>{})}}catch(e){}})();
+let mood='';$('#em').innerHTML=['😕','😐','🙂','🤩'].map(e=>`<button>${e}</button>`).join('');
+$$('#em button').forEach(b=>b.onclick=()=>{$$('#em button').forEach(x=>x.classList.remove('on'));b.classList.add('on');mood=b.textContent});
+$('#es').onclick=()=>{if(!mood)return alert('اختر وجهًا يعبّر عن فهمك');save('exits',{name,mood,a:$('#e1').value,b:$('#e2').value,q:$('#e3').value,t:Date.now()});$('#ed').style.display='block';$('#es').disabled=true};
+</script></body></html>
